@@ -46,6 +46,7 @@
     <Compile Include="LimitedQueue.cs" />
     <Compile Include="LimitingFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QPSFilterAttribute.cs" />
     <Compile Include="TokenBucketLimitingService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
