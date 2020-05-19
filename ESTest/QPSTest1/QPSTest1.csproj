@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DB727EE-ED5A-4BFD-BEB2-11EFCBE65496}</ProjectGuid>
+    <ProjectGuid>{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LimitingServiceTest</RootNamespace>
-    <AssemblyName>LimitingServiceTest</AssemblyName>
+    <RootNamespace>QPSTest1</RootNamespace>
+    <AssemblyName>QPSTest1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiServiceTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QPSLimit\QPSLimit.csproj">
-      <Project>{D6265D01-1A26-4C4E-B11C-4AA292E5BAA6}</Project>
-      <Name>QPSLimit</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

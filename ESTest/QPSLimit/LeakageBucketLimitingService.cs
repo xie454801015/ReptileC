@@ -31,7 +31,7 @@ namespace QPSLimit
                 this.limitSize = 100;
             if (this.maxTPS <= 0)
                 this.maxTPS = 1;
-
+            // 空桶待接收
             limitedQueue = new LimitedQueue<object>(limitSize);
             cancelToken = new CancellationTokenSource();
             task = Task.Factory.StartNew(new Action(TokenProcess), cancelToken.Token);
@@ -48,18 +48,38 @@ namespace QPSLimit
                 sleep = 1;
 
             DateTime start = DateTime.Now;
+            bool lastKey = true;
             while (cancelToken.Token.IsCancellationRequested == false)
             {
                 try
                 {
 
                     if (limitedQueue.Count > 0)
-                    {
+                    {   
                         lock (lckObj)
                         {
                             if (limitedQueue.Count > 0)
+                            {
+                                //检索到由空桶状态转到有请求时，强制休眠一个sleep,不立刻排放一个队列空间，
+                                if (lastKey == true)
+                                {
+                                    Thread.Sleep(sleep);
+                                    start = DateTime.Now;
+                                }
                                 limitedQueue.Dequeue();
+                                lastKey = false;
+                            }
+                            else
+                            {
+                                // 此次检索 桶状态回复为空桶。
+                                lastKey = true;
+                            }
                         }
+                    }
+                    else
+                    {
+                        // 此次检索 桶状态回复为空桶。
+                        lastKey = true;
                     }
                 }
                 catch
@@ -73,6 +93,7 @@ namespace QPSLimit
                         int newSleep = sleep - (int)(DateTime.Now - start).TotalMilliseconds;
                         if (newSleep > 1)
                             Thread.Sleep(newSleep - 1); //做一下时间上的补偿
+                                                        //Thread.Sleep(newSleep);
                     }
                     start = DateTime.Now;
                 }

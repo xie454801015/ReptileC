@@ -33,6 +33,7 @@ namespace QPSLimit
                 this.maxTPS = 1;
 
             limitedQueue = new LimitedQueue<object>(limitSize);
+            //注满令牌
             for (int i = 0; i < limitSize; i++)
             {
                 limitedQueue.Enqueue(new object());

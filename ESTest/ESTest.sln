@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPSLimit", "QPSLimit\QPSLim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LimitingServiceTest", "LimitingServiceTest\LimitingServiceTest.csproj", "{7DB727EE-ED5A-4BFD-BEB2-11EFCBE65496}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrottleTest", "ThrottleTest\ThrottleTest.csproj", "{B6F9305C-DEA2-475A-9102-3859B4559668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPSTest1", "QPSTest1\QPSTest1.csproj", "{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{7DB727EE-ED5A-4BFD-BEB2-11EFCBE65496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB727EE-ED5A-4BFD-BEB2-11EFCBE65496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB727EE-ED5A-4BFD-BEB2-11EFCBE65496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F9305C-DEA2-475A-9102-3859B4559668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F9305C-DEA2-475A-9102-3859B4559668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F9305C-DEA2-475A-9102-3859B4559668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F9305C-DEA2-475A-9102-3859B4559668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
