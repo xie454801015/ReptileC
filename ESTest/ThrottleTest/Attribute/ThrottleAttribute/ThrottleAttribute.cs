@@ -71,8 +71,8 @@ namespace ThrottleTest.Attribute.ThrottleAttribute
                     Message = "超限";
                 c.Result = new ContentResult { Content = Message.Replace("{n}", Seconds.ToString()) };
                 // see 409 - http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
-                //c.HttpContext.Response.StatusCode = (int)HttpStatusCode.Conflict;
-                c.HttpContext.Response.StatusCode = 429;
+                c.HttpContext.Response.StatusCode = (int)HttpStatusCode.OK;
+                //c.HttpContext.Response.StatusCode = 429;
             }
 
         }

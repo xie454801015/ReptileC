@@ -7,7 +7,8 @@ using ThrottleTest.Attribute.ThrottleAttribute;
 
 namespace ThrottleTest.Controllers
 {
-    [Throttle(QPSLimit.LimitingType.LeakageBucket, 100, 99)]
+    //[Throttle(QPSLimit.LimitingType.LeakageBucket, 15, 1)]
+    [Throttle(QPSLimit.LimitingType.TokenBucket, 15, 1)]
     public class HomeController : Controller
     {
         //[Throttle(QPSLimit.LimitingType.LeakageBucket, 1, 20)]

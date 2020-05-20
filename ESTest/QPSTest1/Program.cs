@@ -15,7 +15,7 @@ namespace QPSTest1
     {
         static void Main(string[] args)
         {
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
             //List<string> str1 = new List<string>();
             //Thread t1 = new Thread(GetTest1);
             //Thread t2 = new Thread(GetTest2);
@@ -24,6 +24,9 @@ namespace QPSTest1
             //t2.Start();
             ////t3.Start();
             //Thread.Sleep(50000);
+            int p = 1000 / 15;
+            Console.WriteLine(p);
+            Console.WriteLine(p * 15);
             for (int i = 0; i < 7; i++)
             {
                 GetTest2();
@@ -35,7 +38,7 @@ namespace QPSTest1
         public  static void   GetTest1()
         {
      
-            for (int i = 0; i < 2000; i++)
+            for (int i = 0; i < 15; i++)
             {
                 string str = GetData("https://localhost:44347/home/test1");
                 Console.WriteLine($"Test1:{str}:{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss fff")}-------{i}");
@@ -56,10 +59,17 @@ namespace QPSTest1
                     success++;
                 }
                 count++;
+                int newSleep = (int)(DateTime.Now - start).TotalMilliseconds;
+                if (newSleep >= 1000)
+                {
+                    Console.WriteLine($"结束2:总数{count}---成功{success}---耗时{newSleep}ms，成功率={success * 100 / count}%，qps估算={success * 1000 / newSleep}");
+                    success = 0;
+                    count = 0;
+                    start = DateTime.Now;
+                }
             }
-            int newSleep =(int)(DateTime.Now - start).TotalMilliseconds;
-            Console.WriteLine($"结束2:总数{count}---成功{success}---耗时{newSleep}ms，成功率={success*100/count}%，qps估算={success*1000/newSleep}");
         }
+            
         public static void GetTest3()
         {
 
