@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESTest", "ESTest\ESTest.csproj", "{AF71B98C-D7FE-44FA-A3F4-3F624AF630AA}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrottleTest", "ThrottleTest\ThrottleTest.csproj", "{B6F9305C-DEA2-475A-9102-3859B4559668}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPSTest1", "QPSTest1\QPSTest1.csproj", "{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerTest", "SwaggerTest\SwaggerTest.csproj", "{C8843278-9C20-4703-B094-3F3797F4BB90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25AE2BCC-955C-4161-ACD7-52A7F8B4CC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8843278-9C20-4703-B094-3F3797F4BB90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8843278-9C20-4703-B094-3F3797F4BB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8843278-9C20-4703-B094-3F3797F4BB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8843278-9C20-4703-B094-3F3797F4BB90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
